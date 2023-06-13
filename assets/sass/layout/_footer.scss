@@ -1,0 +1,141 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+
+.footer {
+    @extend %of-hidden;
+    @include background-cover;
+    background: $black-color;
+
+    .padding-top-footer {
+        padding-block-start: 50px
+    }
+
+    .padding-bottom-footer {
+        padding-block-end: 50px
+    }
+
+    &__about {
+        >a {
+            @extend %d-inline-block,
+            %mb-20;
+            color: $white-color;
+        }
+
+        >p {
+            max-inline-size: 60ch;
+        }
+    }
+
+
+    &__links {
+        &-title {
+            @extend %mb-15;
+            color: $white-color !important;
+        }
+    }
+
+    &__linklist {
+        &-item {
+            &:not(:last-child) {
+                margin-bottom: .35rem;
+            }
+
+            a {
+                @include add-prefix(transition, $transition);
+                @extend %p-rel,
+                %d-inline-block;
+                font-family: $text-font;
+
+                // &::after {
+                //     @extend %p-abs;
+                //     @include add-prefix(transform, translateY(-50%));
+                //     @include add-prefix(transition, $transition);
+                //     top: 50%;
+                //     left: 0;
+                //     width: 10px;
+                //     height: 2px;
+                //     background-color: $theme-color;
+                //     opacity: 0;
+                // }
+
+                &:hover {
+                    // @include add-prefix(transform, translateX(10px));
+                    color: $primary-color;
+
+                    // &:after {
+                    //     opacity: 1;
+                    //     left: -12px;
+                    // }
+                }
+            }
+
+
+        }
+    }
+
+    &__copyright {
+        border-top: 1px solid rgba($theme-color, $alpha: .10);
+
+        .footer-logo {
+            @include breakpoint(max-lg) {
+                margin-block-end: 20px;
+                text-align: start !important;
+            }
+        }
+
+        .footer_menu {
+            @include breakpoint(max-lg) {
+                margin-block-start: 30px;
+                text-align: start !important;
+            }
+
+            nav {
+                ul {
+                    margin: 0;
+
+                    li {
+                        display: inline-block;
+
+                        a {
+                            color: #696865;
+                            font-size: 18px;
+                            padding: 12px;
+                            text-transform: capitalize;
+                            font-family: "Jost", sans-serif;
+                            font-weight: 500;
+                            transition: all 0.3s ease;
+
+                            &:hover {
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyright_class {
+            p {
+                @include breakpoint(max-xl) {
+                    font-size: 14px !important;
+                }
+
+                a {
+                    font-weight: 500;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+
+
+            @include breakpoint(max-lg) {
+                text-align: start !important;
+            }
+        }
+    }
+}

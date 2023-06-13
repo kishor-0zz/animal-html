@@ -1,0 +1,104 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+//default button style
+.default-btn {
+    @extend %p-rel,
+    %d-inline-block,
+    %of-hidden,
+    %text-center;
+    @include font-size(20px);
+    text-decoration: none;
+    font-family: $title-font;
+    color: $white-color;
+    padding: 16px 30px;
+    line-height: 29px;
+    transition: $transition;
+    background: $theme-color;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-style: normal;
+    border-radius: 5px;
+    border: 1px solid transparent;
+
+    @include breakpoint(max-xxxl) {
+        padding: 10px 20px;
+        @include font-size(16px);
+        font-weight: 600;
+        line-height: 25px;
+    }
+
+    &.default-btn2 {
+        background: $primary-color;
+        color: $title-color;
+
+        &:hover {
+            color: $primary-color;
+            background: transparent;
+            border: 1px solid $primary-color;
+        }
+    }
+
+
+    // @include breakpoint(xl) {
+    //     padding: 0 2.25rem;
+    //     line-height: 56px;
+    // }
+
+    span {
+        position: inherit;
+        z-index: 1;
+
+        svg,
+        img {
+            @extend %mr-5;
+        }
+    }
+
+    &--small {
+        line-height: 46px;
+        padding: 0 1.25rem;
+    }
+
+    &:hover {
+        color: $white-color;
+        background-color: darken($theme-color, $amount: 5);
+    }
+
+    &-active {
+        background-color: $theme-color;
+        border-color: $theme-color;
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: $title-color;
+        border-color: $title-color;
+
+        &:hover {
+            background-color: $title-color;
+            color: $white-color;
+        }
+    }
+}
+
+
+.text-btn {
+    @include add-prefix(transition, $transition);
+    @extend %align-items-center;
+    display: inline-flex;
+    font-weight: 700;
+    color: $title-color;
+
+    span {
+        @extend %ml-10;
+        @include add-prefix(transition, $transition);
+    }
+
+    &:hover {
+        span {
+            @include add-prefix(transform, translateX(5px));
+        }
+    }
+}

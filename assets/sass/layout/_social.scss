@@ -1,0 +1,52 @@
+.footer__about {
+    @include breakpoint(max-lg) {
+        text-align: center;
+    }
+
+    h5 {
+        @include breakpoint(max-lg) {
+            margin-block-end: 20px;
+        }
+    }
+
+
+}
+
+.social {
+    @extend %flex;
+    @extend %align-items-center;
+    @extend %list-none;
+    @extend %pl-0;
+    @extend %mb-0;
+    gap: 15px;
+
+    @include breakpoint(max-lg) {
+        justify-content: center;
+    }
+
+    &__link {
+        @extend %d-inline-block;
+        @extend %text-center;
+        @include box(45px);
+        @include add-prefix(transition, background-color .2s linear);
+        line-height: 45px;
+        border-radius: 5px;
+        background-color: transparent;
+        border: 1px solid $text-color;
+        @include font-size(18px);
+
+        svg {
+            color: $text-color;
+            font-size: inherit;
+        }
+
+        &:hover {
+            background-color: $primary-color;
+            border: 1px solid $primary-color;
+
+            svg {
+                color: #ffffff !important;
+            }
+        }
+    }
+}

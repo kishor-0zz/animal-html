@@ -1,0 +1,217 @@
+/**
+ * Basic typography style for copy text
+ */
+
+
+body {
+  color: $text-color;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: $text-font;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  ::selection {
+    background: $primary-color;
+    color: #000000;
+    /* WebKit/Blink Browsers */
+  }
+
+  ::-moz-selection {
+    // background: $theme-color;
+    background: $primary-color;
+    color: #000000;
+    /* Gecko Browsers */
+  }
+}
+
+p {
+  font-size: $fs-base;
+  line-height: 160%;
+  color: $text-color;
+  font-weight: 400;
+  font-style: normal;
+  font-family: $text-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title-font;
+  color: $title-color;
+  line-height: 1.2;
+  font-weight: 700;
+
+  a {
+    color: inherit;
+  }
+}
+
+h1 {
+  @include font-size($fs-h1);
+}
+
+h2 {
+  @include font-size($fs-h2);
+}
+
+h3 {
+  @include font-size($fs-h3);
+}
+
+h4 {
+  @include font-size($fs-h4);
+}
+
+h5 {
+  @include font-size($fs-h5);
+  font-family: $title-font;
+}
+
+h6 {
+  @include font-size($fs-h6);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $theme-color;
+  }
+}
+
+ul,
+ol {
+  @extend %list-none;
+  @extend %pl-0;
+}
+
+.container-xxl {
+  max-width: 1920px;
+}
+
+.container {
+  @include breakpoint(xxxl) {
+    max-width: 1595px;
+  }
+}
+
+.section-padding {
+  padding-block: 120px;
+
+  @include breakpoint(max-md) {
+    padding-block: 80px;
+  }
+}
+
+.section-padding-bottom {
+  padding-block-end: 120px;
+
+  @include breakpoint(max-md) {
+    padding-block: 40px;
+  }
+}
+
+.section-padding-start {
+  padding-block-start: 120px;
+
+  @include breakpoint(max-md) {
+    padding-block: 40px;
+  }
+}
+
+.section-title {
+  h2 {
+    font-family: $title-font;
+    font-weight: 600;
+    // line-height: 76.8px;
+    display: block;
+    width: 100%;
+    text-transform: capitalize;
+
+    @include breakpoint(xxl) {
+      font-size: $fs-h2;
+    }
+
+    @include breakpoint(max-xxl) {
+      font-size: 46px;
+    }
+
+    @include breakpoint(max-mlg) {
+      font-size: 42px;
+    }
+
+    @include breakpoint(max-lg) {
+      font-size: 30px;
+    }
+
+    @include breakpoint(max-md) {
+      width: 100%;
+      font-size: 28px;
+    }
+
+    @include breakpoint(max-sm) {
+      font-size: 28px;
+    }
+
+    @include breakpoint(max-xsm) {
+      width: 100%;
+      font-size: 26px;
+    }
+
+    span {
+      display: inline-block;
+      color: $primary-color;
+    }
+
+  }
+
+  p {
+    width: 100%;
+    margin-block-end: 0;
+
+    @include breakpoint(max-xsm) {
+      width: 100%;
+    }
+
+    @include breakpoint(max-sm) {
+      width: 100%;
+    }
+
+    // @include breakpoint(md) {
+    //   width: 100%;
+    // }
+
+    @include breakpoint(max-md) {
+      width: 100%;
+    }
+
+    @include breakpoint(max-lg) {
+      width: 100%;
+    }
+
+
+  }
+
+  .btn-group {
+    margin-block-start: 40px;
+
+    a {
+      font-family: $text-font;
+    }
+  }
+}

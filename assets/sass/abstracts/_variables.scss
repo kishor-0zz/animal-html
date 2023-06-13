@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+$bootstrap-sass-asset-helper: false !default;
+//
+// Variables
+// --------------------------------------------------
+
+
+//Use Colors
+$primary-color: #FFC400;
+$secondary-color:#00BFCB;
+$theme-color: #FBFBFB;
+$title-color: #1C1B19;
+$text-color: #696865;
+$box-color: #F5F6FA;
+$white-color: #ffffff;
+
+
+// extra
+$border-color: #1d253b;
+$body-color: #f1f2ff;
+$black-color:#313243;
+
+// social-media color
+$facebook: #3b5998;
+$twitter: #55acee;
+$linkedin: #007bb5;
+$skype: #2fb7df;
+$youtube: #cd201f;
+$google: #dd4b39;
+$camera: #e4405f;
+$instagram: #e4405f;
+$tumblr: #34465d;
+$behance: #1769ff;
+
+
+//== Typography
+// font-family
+$text-font: 'Poppins',
+sans-serif;
+$title-font: 'Poppins',
+sans-serif;
+
+
+
+// font-size
+
+$fs-base: 16px !default;
+$fs-base2: 20px;
+$fs-h1: 64px;
+$fs-h2: 56px;
+$fs-h3: 40px;
+$fs-h4: 32px;
+$fs-h5: 20px;
+$fs-h6: 18px;
+
+
+
+//  transition
+$transition: all 0.3s ease;
+
+//shadow variables
+$shadow1 : 0px 10px 26px 0px #62809C33;
+$shadow2 : 0px 10px 16px 0px #62809C33;
