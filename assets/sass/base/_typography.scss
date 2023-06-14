@@ -111,15 +111,15 @@ ol {
 }
 
 .section-padding {
-  padding-block: 120px;
+  padding-block: 80px;
 
   @include breakpoint(max-md) {
-    padding-block: 80px;
+    padding-block: 70px;
   }
 }
 
 .section-padding-bottom {
-  padding-block-end: 120px;
+  padding-block-end: 60px;
 
   @include breakpoint(max-md) {
     padding-block: 40px;
@@ -127,7 +127,7 @@ ol {
 }
 
 .section-padding-start {
-  padding-block-start: 120px;
+  padding-block-start: 60px;
 
   @include breakpoint(max-md) {
     padding-block: 40px;
@@ -135,13 +135,36 @@ ol {
 }
 
 .section-title {
+  padding-block-end: 60px;
+
+  @include breakpoint(mlg) {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  &.white {
+
+    h2,
+    p {
+      color: $white-color !important;
+    }
+
+  }
+
+  @include breakpoint(max-md) {
+    padding-block: 40px;
+  }
+
   h2 {
     font-family: $title-font;
-    font-weight: 600;
-    // line-height: 76.8px;
+    font-weight: 700;
+    line-height: 76.8px;
     display: block;
     width: 100%;
     text-transform: capitalize;
+
+
+
 
     @include breakpoint(xxl) {
       font-size: $fs-h2;
@@ -153,6 +176,7 @@ ol {
 
     @include breakpoint(max-mlg) {
       font-size: 42px;
+      margin: 0;
     }
 
     @include breakpoint(max-lg) {
@@ -183,6 +207,8 @@ ol {
   p {
     width: 100%;
     margin-block-end: 0;
+    font-size: $fs-base2;
+    text-transform: capitalize;
 
     @include breakpoint(max-xsm) {
       width: 100%;

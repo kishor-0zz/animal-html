@@ -1,0 +1,53 @@
+.banner {
+   background: $primary-color;
+
+   .banner {
+      &__content {
+         h1 {
+            color: $white-color;
+            font-weight: 600;
+            @include font-size($fs-h2);
+            margin-block-end: 2rem;
+         }
+
+         p {
+            color: $white-color;
+            margin-block-end: 2rem;
+         }
+      }
+
+      &__btns {
+         display: flex;
+
+         .btn-one {
+            margin-inline-end: 1rem;
+
+            .default-btn2 {
+               background: $secondary-color;
+               color: $white-color;
+
+               &:hover {
+                  background: $white-color;
+                  border: 1px solid $secondary-color;
+                  color: $secondary-color;
+               }
+            }
+         }
+
+         .btn-two {
+            .default-btn--secondary {
+               border: 1px solid $white-color;
+               color: $white-color;
+               transition: $transition;
+
+               &:hover {
+                  background: $white-color;
+                  border: 1px solid $secondary-color;
+                  color: $secondary-color;
+               }
+
+            }
+         }
+      }
+   }
+}

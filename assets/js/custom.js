@@ -1,8 +1,20 @@
+AOS.init();
+
 (function ($) {
     //preloader js
     $(window).on('load', function () {
         $('.preloader').fadeOut(1000);
     })
+
+    $('.video-popup, .popup-vimeo, .popup-gmaps').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+
+        fixedContentPos: false
+    });
 
 
 

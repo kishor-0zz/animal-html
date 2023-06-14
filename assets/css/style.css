@@ -722,16 +722,16 @@ a:hover {
 }
 
 .section-padding {
-  padding-block: 120px;
+  padding-block: 80px;
 }
 @media (max-width: 767px) {
   .section-padding {
-    padding-block: 80px;
+    padding-block: 70px;
   }
 }
 
 .section-padding-bottom {
-  padding-block-end: 120px;
+  padding-block-end: 60px;
 }
 @media (max-width: 767px) {
   .section-padding-bottom {
@@ -740,7 +740,7 @@ a:hover {
 }
 
 .section-padding-start {
-  padding-block-start: 120px;
+  padding-block-start: 60px;
 }
 @media (max-width: 767px) {
   .section-padding-start {
@@ -748,9 +748,28 @@ a:hover {
   }
 }
 
+.section-title {
+  padding-block-end: 60px;
+}
+@media (min-width: 1024px) {
+  .section-title {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+.section-title.white h2,
+.section-title.white p {
+  color: #ffffff !important;
+}
+@media (max-width: 767px) {
+  .section-title {
+    padding-block: 40px;
+  }
+}
 .section-title h2 {
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 76.8px;
   display: block;
   width: 100%;
   text-transform: capitalize;
@@ -768,6 +787,7 @@ a:hover {
 @media (max-width: 1023px) {
   .section-title h2 {
     font-size: 42px;
+    margin: 0;
   }
 }
 @media (max-width: 991px) {
@@ -799,6 +819,8 @@ a:hover {
 .section-title p {
   width: 100%;
   margin-block-end: 0;
+  font-size: 20px;
+  text-transform: capitalize;
 }
 @media (max-width: 320px) {
   .section-title p {
@@ -1439,25 +1461,25 @@ a:hover {
 
 /*=-=-=-=-=-=====> utility classes end here <======= -=-=-=-=-=-=-=*/
 /* @@@@@@@@@@@@@  Extend Property CSS start here  @@@@@@@@@@@@@@ */
-.social, .wallet-modal .wallet__list-item a, .wallet-modal .wallet__list, .menu, .header-wrapper .menu-area .header-search, .header-wrapper .menu-area, .header-wrapper, .category-filter__wrapper {
+.social, .menu, .header-wrapper .menu-area .header-search, .header-wrapper .menu-area, .header-wrapper, .category-filter__wrapper {
   display: flex;
   flex-wrap: wrap;
 }
 
-.footer__linklist-item a, .default-btn, .wallet-modal .modal-header, .menu-item-has-children > a, .header-bar, .header-section {
+.footer__linklist-item a, .about__reverse-box, .about__img-box, .default-btn, .menu-item-has-children > a, .header-bar, .header-section {
   position: relative;
 }
 
-.wallet-modal .modal-header .btn-close, .menu-item-has-children > a::before, .menu-item-has-children > a::after, .header-bar span {
+.menu-item-has-children > a::before, .menu-item-has-children > a::after, .header-bar span {
   position: absolute;
   content: "";
 }
 
-.footer, .default-btn, .wallet-modal .wallet__list-item a span {
+.footer, .about__reverse-box, .about__img-box, .default-btn {
   overflow: hidden;
 }
 
-.header-bar {
+.about__reverse a, .about__img a, .header-bar {
   cursor: pointer;
 }
 
@@ -1465,15 +1487,20 @@ a:hover {
   width: 100%;
 }
 
-.wallet-modal .wallet__list-item a, .wallet-modal .modal-header {
-  justify-content: center;
+.about__reverse a, .about__img a {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
-.wallet-modal .wallet__list, .header-wrapper, .category-filter__wrapper {
+.header-wrapper, .category-filter__wrapper {
   justify-content: space-between;
 }
 
-.social, .text-btn, .wallet-modal .wallet__list, .header-wrapper .menu-area .header-search, .header-wrapper .menu-area, .header-wrapper, .category-filter__wrapper {
+.social, .text-btn, .header-wrapper .menu-area .header-search, .header-wrapper .menu-area, .header-wrapper, .category-filter__wrapper {
   align-items: center;
 }
 
@@ -1481,13 +1508,13 @@ a:hover {
   display: block;
 }
 
-.footer__linklist-item a, .footer__about > a, .social__link, .default-btn, .wallet-modal .wallet__list-item a span, .header-bar span, .category-filter__btn {
+.footer__linklist-item a, .footer__about > a, .social__link, .default-btn, .header-bar span, .category-filter__btn {
   display: inline-block;
 }
 
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
-.social__link, .default-btn, .section-header, .wallet-modal .wallet__list-item a span, .wallet-modal .wallet__list-item a, .wallet-modal .modal-content, .category-filter__btn {
+.social__link, .about__reverse a, .about__img a, .default-btn, .category-filter__btn {
   text-align: center;
 }
 
@@ -1505,7 +1532,7 @@ ol {
   margin-bottom: 5px;
 }
 
-.footer__links-title, .section-header h2 {
+.footer__links-title {
   margin-bottom: 15px;
 }
 
@@ -1531,10 +1558,6 @@ ol {
 }
 
 /* @@@@@@@@@@@@@  Extend Property padding 10 - 30 CSS Writing Now  @@@@@@@@@@@@@@ */
-.wallet-modal .wallet__list-item a {
-  padding: 10px;
-}
-
 .social, ul,
 ol {
   padding-left: 0;
@@ -1553,10 +1576,8 @@ ol {
   position: fixed;
   top: 0;
   left: 0;
-  border-bottom: 1px solid #FBFBFB;
   box-shadow: 0px 5px 10px -5px rgba(49, 50, 67, 0.3);
   z-index: 999;
-  background: #FBFBFB;
 }
 
 .header-wrapper {
@@ -1957,88 +1978,10 @@ ol {
 
 /*================*** Multipage Header Section End Here     ***===================*/
 /*============= wallet modal start=============*/
-.wallet-modal {
-  background-color: rgba(241, 242, 255, 0.8);
-}
-.wallet-modal .modal-content {
-  background-color: #FFC400;
-}
-.wallet-modal .modal-header {
-  border-bottom: 1px solid rgba(251, 251, 251, 0.3);
-}
-.wallet-modal .modal-header h5 {
-  color: #FBFBFB;
-}
-.wallet-modal .modal-header .btn-close {
-  top: 0;
-  right: 0;
-  background-color: #FBFBFB;
-}
-.wallet-modal .modal-body > p:first-child {
-  font-size: 1.125rem;
-  color: #ffffff;
-}
-.wallet-modal .wallet__list {
-  margin-block: 30px;
-}
-.wallet-modal .wallet__list-item a {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  flex-direction: column;
-  border: 1px solid rgba(251, 251, 251, 0.1);
-  border-radius: 5px;
-}
-.wallet-modal .wallet__list-item a span {
-  width: 80px;
-  height: 80px;
-  border-radius: 5px;
-}
-.wallet-modal .wallet__list-item:hover a {
-  border-color: #FBFBFB;
-}
-
 /*============= wallet modal end=============*/
 /*=-=-=-======< Section header start here >==========-=-=-=-*/
-.section-header {
-  margin-bottom: 40px;
-}
-@media (min-width: 992px) {
-  .section-header {
-    margin-bottom: 60px;
-  }
-}
 /*=-=-=-======< Section header end here >==========-=-=-=-*/
 /*=-=-=-======< Page header start here >==========-=-=-=-*/
-.page-header {
-  padding-block: 70px;
-  background-size: cover;
-  background-position: center;
-}
-@media (min-width: 992px) {
-  .page-header {
-    padding-block: 100px;
-  }
-}
-@media (min-width: 1400px) {
-  .page-header {
-    padding-block: 120px;
-  }
-}
-@media (min-width: 992px) {
-  .page-header .breadcrumb-item {
-    font-size: 1.125rem;
-  }
-}
-.page-header .breadcrumb-item:before {
-  color: currentColor;
-}
-.page-header .breadcrumb-item.active, .page-header .breadcrumb-item:hover {
-  color: #FBFBFB;
-}
-
 /*=-=-=-======< Page header end here >==========-=-=-=-*/
 .preloader {
   position: fixed;
@@ -2136,6 +2079,156 @@ ol {
   -ms-transform: translateX(5px);
   -o-transform: translateX(5px);
   transform: translateX(5px);
+}
+
+.banner {
+  background: #FFC400;
+}
+.banner .banner__content h1 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: calc(1.475rem + 2.3142857143vw);
+  margin-block-end: 2rem;
+}
+@media (min-width: 1400px) {
+  .banner .banner__content h1 {
+    font-size: 3.5rem;
+  }
+}
+.banner .banner__content p {
+  color: #ffffff;
+  margin-block-end: 2rem;
+}
+.banner .banner__btns {
+  display: flex;
+}
+.banner .banner__btns .btn-one {
+  margin-inline-end: 1rem;
+}
+.banner .banner__btns .btn-one .default-btn2 {
+  background: #00BFCB;
+  color: #ffffff;
+}
+.banner .banner__btns .btn-one .default-btn2:hover {
+  background: #ffffff;
+  border: 1px solid #00BFCB;
+  color: #00BFCB;
+}
+.banner .banner__btns .btn-two .default-btn--secondary {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.banner .banner__btns .btn-two .default-btn--secondary:hover {
+  background: #ffffff;
+  border: 1px solid #00BFCB;
+  color: #00BFCB;
+}
+
+.about {
+  background: #ffffff;
+  position: relative;
+}
+.about__content h3 {
+  margin-block-end: 2rem;
+}
+.about__content p {
+  margin-block-end: 1.5rem;
+}
+.about__btns .btn-one a {
+  color: #ffffff;
+}
+@media (min-width: 1024px) {
+  .about__img::before {
+    content: "";
+    position: absolute;
+    left: -5%;
+    bottom: 0;
+    width: 40%;
+    height: 40%;
+    background: #FFC400;
+  }
+}
+.about__img-box img {
+  width: 100%;
+}
+.about__img-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(185, 146, 19, 0.5607843137);
+}
+.about__img a {
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+  line-height: 50px;
+  color: #FFC400;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+.about__img a:hover {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+@media (min-width: 1024px) {
+  .about__reverse::before {
+    content: "";
+    position: absolute;
+    Right: -5%;
+    bottom: 0;
+    width: 40%;
+    height: 40%;
+    background: #FFC400;
+  }
+}
+.about__reverse-box img {
+  width: 100%;
+}
+.about__reverse-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(185, 146, 19, 0.5607843137);
+}
+.about__reverse a {
+  width: 50px;
+  height: 50px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+  line-height: 50px;
+  color: #FFC400;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+.about__reverse a:hover {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.service {
+  background: #FFC400;
+}
+.service__img {
+  margin-block-end: 2rem;
+}
+.service__title h4 {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+.service__dsc p {
+  color: #ffffff !important;
 }
 
 @media (max-width: 991px) {

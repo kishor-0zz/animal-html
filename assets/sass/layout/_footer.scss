@@ -28,7 +28,6 @@
         }
     }
 
-
     &__links {
         &-title {
             @extend %mb-15;
@@ -48,30 +47,10 @@
                 %d-inline-block;
                 font-family: $text-font;
 
-                // &::after {
-                //     @extend %p-abs;
-                //     @include add-prefix(transform, translateY(-50%));
-                //     @include add-prefix(transition, $transition);
-                //     top: 50%;
-                //     left: 0;
-                //     width: 10px;
-                //     height: 2px;
-                //     background-color: $theme-color;
-                //     opacity: 0;
-                // }
-
                 &:hover {
-                    // @include add-prefix(transform, translateX(10px));
                     color: $primary-color;
-
-                    // &:after {
-                    //     opacity: 1;
-                    //     left: -12px;
-                    // }
                 }
             }
-
-
         }
     }
 
@@ -131,7 +110,6 @@
                     }
                 }
             }
-
 
             @include breakpoint(max-lg) {
                 text-align: start !important;

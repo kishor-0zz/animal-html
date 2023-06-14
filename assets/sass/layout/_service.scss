@@ -1,0 +1,20 @@
+.service {
+   background: $primary-color;
+
+   &__img {
+      margin-block-end: 2rem;
+   }
+
+   &__title {
+      h4 {
+         color: $white-color !important;
+         font-weight: 600;
+      }
+   }
+
+   &__dsc {
+      p {
+         color: $white-color !important;
+      }
+   }
+}
