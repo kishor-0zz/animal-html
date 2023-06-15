@@ -15,17 +15,6 @@
 }
 
 
-// Usage:
-//***********
-
-// div {
-//   @include add-prefix(transform, scale3d(2.5, 2, 1.5));
-// }
-
-//*=====================****===================== 
-
-
-
 
 
 //*=====================****===================== 
@@ -61,24 +50,6 @@
   animation: #{$str};
 }
 
-//========usages
-// @include keyframes(fade-out) {
-//   0% {
-//     opacity: 1;
-//   }
-
-//   90% {
-//     opacity: 0;
-//   }
-// }
-//--------------------------------------------------
-// //===Add animation to element
-// .element {
-//   width: 100px;
-//   height: 100px;
-//   background: black;
-//   @include animation('fade-out 5s 3');
-// }
 
 //=====================****===================== 
 
@@ -182,21 +153,7 @@
 }
 
 
-// Usage
-//************
-
-//  .selector {
-//   @include breakpoint(md) {
-//     font-size: 3rem;
-//   }
-// }
-
-
-
 //*=====================****===================== 
-
-
-
 
 
 //*=====================****===================== 
@@ -212,17 +169,6 @@
     background-size: $width $height;
   }
 }
-
-// Usage:
-// ************
-
-// .image {
-//   background: url("my-image.png") no-repeat;
-//   @include retina-image("my-image2x.png", 1000px, 500px);
-// }
-
-//*=====================****===================== 
-
 
 
 
@@ -259,27 +205,6 @@
 }
 
 
-// Usage:
-// *************
-
-//==----without arguments (default)
-
-// div {
-//   @include arrow();
-// }
-
-
-//==----with custom arguments
-
-// div {
-//   @include arrow(up, 10px, #efefef);
-// }
-
-
-//*=====================****===================== 
-
-
-
 
 //*=====================****===================== 
 //*Creating box 
@@ -288,18 +213,6 @@
   height: $height;
 }
 
-
-//* ===== Usage ===== 
-
-//====---You can pass width && height
-
-//   @include box(200px, 300px);
-
-
-//====or just pass width and the height
-
-//      will default to the width value */
-//   @include box(200px);
 
 
 //*=====================****===================== 
@@ -315,12 +228,6 @@
   background-position: center;
 }
 
-//* ===== Usage ===== 
-
-// div {
-//   background-image: url("cute-doggo.png");
-//   @include background-cover;
-// }
 
 //*=====================****===================== 
 
@@ -338,17 +245,5 @@
     }
   }
 }
-
-// button {
-//   color: #fff;
-//   background-color: #252525;
-//   padding: .25em .75em;
-
-//    @include hover {
-//     // ---Instead of &:hover use @include hover
-//     color: #000;
-//     background-color: #fff;
-//   }
-// }
 
 //*=====================****===================== 

@@ -41,6 +41,10 @@
             max-inline-size: 60ch;
             color: $white-color;
 
+            @include breakpoint(max-lg) {
+                margin: 12px auto;
+            }
+
         }
     }
 
@@ -80,6 +84,11 @@
 
     .footer-search {
 
+        .input-group {
+            @include breakpoint(max-mlg) {
+                justify-content: center !important;
+            }
+        }
 
         @include breakpoint(max-md) {
             display: none;
@@ -104,6 +113,10 @@
                 padding-inline: 20px;
                 border-radius: 0px 5px 5px 0px !important;
                 transition: $transition;
+
+                img {
+                    max-width: 20px;
+                }
 
                 &:hover {
                     background: #00bdcbc9;

@@ -1563,7 +1563,7 @@ ol {
   padding-left: 0;
 }
 
-/*================***Mutlipage  Header Section Start Here***===================*/
+/*================***Header Section Start Here***===================*/
 .header-section {
   background-color: #EAAD00;
 }
@@ -1590,17 +1590,17 @@ ol {
 }
 @media (min-width: 768px) {
   .header-wrapper {
-    padding-block: 15px;
+    padding-block: 14px;
   }
 }
 @media (min-width: 1200px) {
   .header-wrapper {
-    padding-block: 20px;
+    padding-block: 14px;
   }
 }
 @media (max-width: 767px) {
   .header-wrapper {
-    padding-block: 20px;
+    padding-block: 14px;
   }
 }
 .header-wrapper .logo a img {
@@ -1976,13 +1976,10 @@ ol {
   opacity: 0;
 }
 
-/*================*** Multipage Header Section End Here     ***===================*/
-/*============= wallet modal start=============*/
-/*============= wallet modal end=============*/
-/*=-=-=-======< Section header start here >==========-=-=-=-*/
-/*=-=-=-======< Section header end here >==========-=-=-=-*/
-/*=-=-=-======< Page header start here >==========-=-=-=-*/
-/*=-=-=-======< Page header end here >==========-=-=-=-*/
+/*================***Header Section End Here     ***===================*/
+.preloader {
+  display: none;
+}
 @media (min-width: 1024px) {
   .preloader {
     position: fixed;
@@ -2452,6 +2449,11 @@ ol {
   color: #ffffff;
 }
 @media (max-width: 991px) {
+  .footer__about > p {
+    margin: 12px auto;
+  }
+}
+@media (max-width: 991px) {
   .footer__links {
     text-align: center !important;
   }
@@ -2477,6 +2479,11 @@ ol {
 .footer .footer-search {
   column-gap: 20px;
 }
+@media (max-width: 1023px) {
+  .footer .footer-search .input-group {
+    justify-content: center !important;
+  }
+}
 @media (max-width: 767px) {
   .footer .footer-search {
     display: none;
@@ -2493,6 +2500,9 @@ ol {
   padding-inline: 20px;
   border-radius: 0px 5px 5px 0px !important;
   transition: all 0.3s ease;
+}
+.footer .footer-search .input-group .search-btn img {
+  max-width: 20px;
 }
 .footer .footer-search .input-group .search-btn:hover {
   background: rgba(0, 189, 203, 0.7882352941);

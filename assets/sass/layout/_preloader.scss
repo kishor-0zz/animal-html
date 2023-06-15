@@ -1,6 +1,5 @@
 .preloader {
-    // display: none;
-
+    display: none;
 
     @include breakpoint(mlg) {
         position: fixed;
@@ -13,16 +12,10 @@
         background-color: $body-color;
         z-index: 99999;
         display: block;
-
-        // img {
-        //     max-width: 80px;
-        //     @extend %pos-center;
-        // }
     }
 
     img {
         max-width: 80px;
         @extend %pos-center;
     }
-
 }

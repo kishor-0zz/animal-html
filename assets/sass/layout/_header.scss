@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 
-/*================***Mutlipage  Header Section Start Here***===================*/
+/*================***Header Section Start Here***===================*/
 
 .header-section {
     @extend %p-rel;
@@ -31,15 +31,15 @@
     }
 
     @include breakpoint(md) {
-        padding-block: 15px;
+        padding-block: 14px;
     }
 
     @include breakpoint(xl) {
-        padding-block: 20px;
+        padding-block: 14px;
     }
 
     @include breakpoint(max-md) {
-        padding-block: 20px;
+        padding-block: 14px;
     }
 
     .logo {
@@ -482,138 +482,4 @@
     }
 }
 
-/*================*** Multipage Header Section End Here     ***===================*/
-
-
-
-
-/*============= wallet modal start=============*/
-// .wallet-modal {
-//     background-color: rgba($body-color, $alpha: .80);
-
-//     .modal-content {
-//         @extend %text-center;
-//         background-color: $primary-color;
-//     }
-
-//     .modal-header {
-//         @extend %p-rel,
-//         %justify-center;
-//         border-bottom: 1px solid rgba($theme-color, $alpha: .3);
-
-//         h5 {
-//             color: $theme-color;
-//         }
-
-//         .btn-close {
-//             @extend %p-abs;
-//             top: 0;
-//             right: 0;
-//             background-color: $theme-color;
-//         }
-//     }
-
-//     .modal-body {
-//         >p {
-//             &:first-child {
-//                 @include font-size(18px);
-//                 color: $white-color;
-//             }
-
-//         }
-//     }
-
-//     .wallet__list {
-//         @extend %flex,
-//         %align-items-center,
-//         %justify-between;
-//         margin-block: 30px;
-
-//         &-item {
-//             a {
-//                 @extend %flex,
-//                 %justify-center,
-//                 %text-center,
-//                 %p-10;
-//                 @include add-prefix(transition, $transition);
-//                 flex-direction: column;
-//                 border: 1px solid rgba($theme-color, $alpha: .1);
-//                 border-radius: 5px;
-
-//                 span {
-//                     @extend %d-inline-block,
-//                     %text-center,
-//                     %of-hidden;
-//                     @include box(80px);
-//                     border-radius: 5px;
-//                 }
-//             }
-
-//             &:hover {
-//                 a {
-//                     border-color: $theme-color;
-//                 }
-
-//             }
-//         }
-//     }
-// }
-
-/*============= wallet modal end=============*/
-
-
-
-
-
-
-/*=-=-=-======< Section header start here >==========-=-=-=-*/
-// .section-header {
-//     @extend %text-center;
-//     margin-bottom: 40px;
-
-//     @include breakpoint(lg) {
-//         margin-bottom: 60px;
-//     }
-
-//     h2 {
-//         @extend %mb-15;
-//     }
-// }
-
-/*=-=-=-======< Section header end here >==========-=-=-=-*/
-
-
-
-
-/*=-=-=-======< Page header start here >==========-=-=-=-*/
-// .page-header {
-//     padding-block: 70px;
-//     background-size: cover;
-//     background-position: center;
-
-//     @include breakpoint(lg) {
-//         padding-block: 100px;
-//     }
-
-//     @include breakpoint(xxl) {
-//         padding-block: 120px;
-//     }
-
-//     .breadcrumb-item {
-//         @include breakpoint(lg) {
-//             @include font-size(18px);
-//         }
-
-//         &:before {
-//             color: currentColor;
-//         }
-
-//         &.active,
-//         &:hover {
-//             color: $theme-color;
-//         }
-
-//     }
-// }
-
-/*=-=-=-======< Page header end here >==========-=-=-=-*/
+/*================***Header Section End Here     ***===================*/
