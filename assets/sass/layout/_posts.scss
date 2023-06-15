@@ -1,0 +1,42 @@
+.posts {
+   .card {
+      transition: $transition;
+      border-radius: 0;
+
+      &:hover {
+         border: 1px solid #9292b938;
+         box-shadow: 0 0 20px 2px #9292b938;
+      }
+
+      img {
+         margin-block-end: 1rem;
+      }
+
+      .card-body {
+         .card-title {
+            color: $black-color;
+         }
+
+         .card-date {
+            color: #00BFCB;
+            font-size: 14px;
+            display: inline-block;
+         }
+
+         .card-link {
+            color: #00BFCB;
+            display: inline-block;
+            font-weight: 600;
+            transition: $transition;
+
+            &:hover {
+               color: $primary-color;
+            }
+
+            .icon {
+               font-size: 10px;
+            }
+         }
+      }
+   }
+}

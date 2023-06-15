@@ -4,6 +4,12 @@
 
 
 .footer {
+    .social {
+        @include breakpoint(max-lg) {
+            justify-content: center !important;
+        }
+    }
+
     @extend %of-hidden;
     @include background-cover;
     background: $black-color;
@@ -17,6 +23,14 @@
     }
 
     &__about {
+        @include breakpoint(max-lg) {
+            text-align: center !important;
+        }
+
+        h4 {
+            color: $white-color;
+        }
+
         >a {
             @extend %d-inline-block,
             %mb-20;
@@ -25,13 +39,22 @@
 
         >p {
             max-inline-size: 60ch;
+            color: $white-color;
+
         }
     }
 
     &__links {
+        @include breakpoint(max-lg) {
+            text-align: center !important;
+        }
+
         &-title {
             @extend %mb-15;
-            color: $white-color !important;
+
+            h5 {
+                color: $white-color;
+            }
         }
     }
 
@@ -46,6 +69,7 @@
                 @extend %p-rel,
                 %d-inline-block;
                 font-family: $text-font;
+                color: $white-color;
 
                 &:hover {
                     color: $primary-color;
@@ -54,65 +78,40 @@
         }
     }
 
-    &__copyright {
-        border-top: 1px solid rgba($theme-color, $alpha: .10);
+    .footer-search {
 
-        .footer-logo {
-            @include breakpoint(max-lg) {
-                margin-block-end: 20px;
-                text-align: start !important;
-            }
+
+        @include breakpoint(max-md) {
+            display: none;
         }
 
-        .footer_menu {
-            @include breakpoint(max-lg) {
-                margin-block-start: 30px;
-                text-align: start !important;
-            }
+        @extend %flex;
+        @extend %align-items-center;
+        column-gap: 20px;
 
-            nav {
-                ul {
-                    margin: 0;
-
-                    li {
-                        display: inline-block;
-
-                        a {
-                            color: #696865;
-                            font-size: 18px;
-                            padding: 12px;
-                            text-transform: capitalize;
-                            font-family: "Jost", sans-serif;
-                            font-weight: 500;
-                            transition: all 0.3s ease;
-
-                            &:hover {
-                                color: $primary-color;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .copyright_class {
-            p {
-                @include breakpoint(max-xl) {
-                    font-size: 14px !important;
-                }
-
-                a {
-                    font-weight: 500;
-                    transition: all 0.3s ease;
-
-                    &:hover {
-                        color: $primary-color;
-                    }
+        .input-group {
+            .form-outline {
+                input {
+                    border-radius: 5px 0px 0px 5px !important;
                 }
             }
 
-            @include breakpoint(max-lg) {
-                text-align: start !important;
+            .search-btn {
+                background: $secondary-color;
+                outline: none;
+                border: none;
+                box-shadow: none;
+                padding-inline: 20px;
+                border-radius: 0px 5px 5px 0px !important;
+                transition: $transition;
+
+                &:hover {
+                    background: #00bdcbc9;
+                }
+
+                .btn-icon {
+                    color: $white-color !important;
+                }
             }
         }
     }

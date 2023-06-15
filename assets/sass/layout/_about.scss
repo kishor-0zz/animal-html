@@ -1,6 +1,7 @@
 .about {
    background: #ffffff;
    position: relative;
+   overflow-x: hidden;
 
    &__content {
       h3 {
@@ -13,6 +14,10 @@
    }
 
    &__btns {
+      @include breakpoint(max-lg) {
+         margin-block-end: 1.5rem;
+      }
+
       .btn-one {
          a {
             color: $white-color;
