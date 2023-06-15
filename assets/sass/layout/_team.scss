@@ -1,0 +1,38 @@
+.team {
+   &__img {
+      margin-block-end: 2rem;
+   }
+
+   &__title {
+      h5 {
+         margin-block-end: 0.4rem;
+      }
+
+      p {
+         font-weight: 600;
+      }
+   }
+
+   .social {
+      li {
+         a {
+            border: $white-color;
+            background: $primary-color;
+            transition: $transition;
+
+            .icon {
+               color: $white-color;
+            }
+
+            &:hover {
+               border: 1px solid $primary-color;
+               background: transparent;
+
+               .icon {
+                  color: $primary-color !important;
+               }
+            }
+         }
+      }
+   }
+}

@@ -27,13 +27,13 @@
     &__link {
         @extend %d-inline-block;
         @extend %text-center;
-        @include box(45px);
+        @include box(30px);
         @include add-prefix(transition, background-color .2s linear);
-        line-height: 45px;
-        border-radius: 5px;
+        line-height: 30px;
+        border-radius: 100px;
         background-color: transparent;
         border: 1px solid $text-color;
-        @include font-size(18px);
+        @include font-size(16px);
 
         svg {
             color: $text-color;

@@ -1,0 +1,40 @@
+.counter {
+   background-image: url("/assets/images/counter/counter-bg.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+   position: relative;
+
+   &::after {
+      @extend %p-abs;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffbf00c0;
+   }
+
+   &__item {
+      position: relative;
+      z-index: 1;
+   }
+
+   &__img {
+      margin-block-end: 2rem;
+
+      @include breakpoint(max-lg) {
+         margin-block-end: 1rem;
+      }
+   }
+
+   &__dsc {
+      span {
+         display: inline-block;
+         color: $white-color;
+         font-size: $fs-h4;
+      }
+
+      h4 {
+         color: $white-color;
+      }
+   }
+}
